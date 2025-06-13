@@ -98,8 +98,8 @@ const Pagesix = () => {
           });
         }, []);
     return (
-        <div id='Community' className='section7 relative -mt-[1] sm:px-0 px-6 py-[50px] md:py-[58px] lg:py-[80px] xl:py-[110px] 2xl:py-[140px]'>
-          <div className='voerflow w-full h-full absolute top-0 left-0 z-[-2]' ></div>
+        <div id='Community' className='section7 relative -mt-[1] sm:px-0 px-6 py-[50px] md:py-[58px] lg:py-[80px] xl:py-[110px] 2xl:py-[140px] voerflow'>
+          {/* <div className=' w-full h-full absolute top-0 left-0 z-[-2]' ></div> */}
           
             <div className='px-[24px] sm:px-0 container mx-auto pb-[32px] sm:pb-[36px] md:pb-[40px] lg:pb-[48px] xl:pb-[64px] 2xl:pb-[80px]'>
                 <div className='relative mt-[40px] sm:mt-[40px] md:mt-[50px] lg:mt-[66px] xl:mt-[80px] 2xl:mt-[100px] pb-[32px] sm:pb-[36px] md:pb-[40px] lg:pb-[48px] xl:pb-[64px] 2xl:pb-[73px]'>

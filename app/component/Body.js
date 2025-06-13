@@ -13,7 +13,7 @@ import Pageseven from './Pageseven';
 const Body = () => {
     return (
         <div className='relative overflow-hidden'>
-            <Pageone/>
+            
             <Pagetwo/>
             <Pagethree/>
             {/* <Pagefore/> */}

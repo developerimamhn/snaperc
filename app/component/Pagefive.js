@@ -40,7 +40,7 @@ const Pagefive = () => {
             const tl = gsap.timeline({
               scrollTrigger: {
                 trigger: wrapperRef.current,
-                start: 'top 80%',
+                start: 'top 100%',
                 end: 'bottom 10%', // Desktop-specific values
                 scrub: 0.8,
               },
@@ -95,8 +95,8 @@ const Pagefive = () => {
     return () => ctx.revert();
   }, []);
     return (
-        <div id='NewsFeed' className='relative '>
-          <Image src={iamsaseszas} alt='loadings' className='absolute bottom-0 left-0 w-full'/>
+        <div id='NewsFeed' className='relative ' ref={wrapperRef}>
+          {/* <Image src={iamsaseszas} alt='loadings' className='absolute bottom-0 left-0 w-full'/> */}
           <div className='container mx-auto sm:px-0 px-6 py-[50px] md:py-[58px] lg:py-[80px] xl:py-[110px] 2xl:py-[140px]'>
             <span className='regulariteems text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] px-[14px] sm:px-[15px] md:px-[16px] lg:px-[20px] xl:px-[24px] 2xl:px-[32px] py-1 sm:py-2 lg:py-3 border-[1px] border-[#d84a0e80] rounded-[90px] '>REFERRAL</span>
             <h2 className='text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:text-[50px] snpergameaws pt-[11px] sm:pt-[12px] md:pt-[13px] lg:pt-[14px] xl:pt-[15px] 2xl:pt-[16px]  pb-[13px] sm:pb-[14px] md:pb-[15px] lg:pb-[16px] xl:pb-[20px] 2xl:pb-[24px]'>Earn While You Trade.<br/>Refer to Multiply.</h2>
@@ -119,11 +119,11 @@ const Pagefive = () => {
             </div>
             <div className=' mt-[11px] sm:mt-[12px] md:mt-[13px] lg:mt-[14px] xl:mt-[15px] 2xl:mt-[16px]'>
               <div className='TOPASEIONTEXTGERQ p-[12px] sm:p-[13px] md:p-[14px] lg:p-[15px] xl:p-[16px] 2xl:p-[20px]'>
-                <div className='flex items-center jusify-between pb-[14px] sm:pb-[15px] md:pb-[16px] lg:pb-[20px] xl:pb-[24px] 2xl:pb-[32px]'>
+                <div  ref={wrapperRef} className='flex items-center jusify-between pb-[14px] sm:pb-[15px] md:pb-[16px] lg:pb-[20px] xl:pb-[24px] 2xl:pb-[32px]'>
                   <h3 className='topuseiaoend text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px]'>Top Users</h3>
                   <button className='semofieasbausesd cursor-pointer ml-auto text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px] px-[13px] sm:px-[14px] md:px-[15px] lg:px-[16px] xl:px-[20px] 2xl:px-[24px] py-[6px] lg:py-[10px]'>See More</button>
                 </div>
-                <div className='gap-[24px] grid grid-rows-5  '>
+                <div ref={wrapperRef} className='gap-[24px] grid grid-rows-5  '>
                   <div className='flex items-center justify-between w-full flexingassection p-[12px] sm:p-[13px] md:p-[14px] lg:p-[15px] xl:p-[16px] 2xl:p-[20px]'>
                     <h3 className='websisedsesser text-[10px] sm:text-[11px] md:text-[12px]'>User Address</h3>
                     <h3 className='websisedsesser text-[10px] sm:text-[11px] md:text-[12px]'>Serial Number</h3>

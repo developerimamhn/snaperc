@@ -6,6 +6,7 @@ import HeroPage from './HeroPage';
 import image1 from './image/image1 (2).png';
 import Image from 'next/image';
 import { gsap } from "gsap";    
+import Pageone from "./Pageone";
 
 
 const Header = () => {
@@ -71,13 +72,13 @@ const Header = () => {
       );
     }, []);
     return (
-        <div className='relative overflow-hidden pb-3'>
+        <div className='relative overflow-hidden backgroiunliaene'>
             <Image className="w-full absolute top-0 left-0 z-[-2] brightness-animation" src={image1} alt="loading ..."/>
 
 
             <NavBar/>
             <HeroPage/>
-
+            <Pageone/>
         </div>
     );
 };

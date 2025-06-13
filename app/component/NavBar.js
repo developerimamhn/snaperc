@@ -97,7 +97,7 @@ const NavBar = () => {
             isVisible ? "translate-y-0 transition-transform duration-300 " : "-translate-y-full transition-transform duration-300 "
         }`}>
             
-            <header className='px-[24px]   flex  justify-between items-center py-[20px] sm:py-[24px] lg:py-[30px] relative  sm:overflow-hidden backgroundimage sm:px-[40px] md:px-[50px] lg:px-[70px] xl:px-[90px] 2xl:px-[100px] '>
+            <header className='px-[24px] container mx-auto  flex  justify-between items-center py-[20px] sm:py-[24px] lg:py-[30px] relative  sm:overflow-hidden backgroundimage sm:px-0'>
             <dev className='linersext absolute bottom-0 left-0 w-full h-[2px] z-10'></dev>
             <Link onClick={(e) => handleScrollToTop(e, "")} href='#' className='cursor-pointer relative flex  items-center justify-start Froggo-Logo'>
                 <Image className='w-full h-[26px] sm:h-[35px] 2xl:h-[48.25px]' src={logo} alt=''/></Link>

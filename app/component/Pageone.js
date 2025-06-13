@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef,useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Slider from 'react-slick';
@@ -11,38 +11,38 @@ import image2 from './image/backgrundtexxt.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
-
 const Pageone = () => {
   const textRef = useRef(null);
   const buttonRef = useRef(null);
   const imageRef = useRef(null);
+  const itemRefs = useRef([]);
 
   useEffect(() => {
     // Check if the screen width is greater than 768px (non-mobile)
     const isDesktop = window.innerWidth > 768;
 
     if (isDesktop) {
-      // Animation for text elements
+      // Animation for text elements (fade in down)
       gsap.from(textRef.current, {
         opacity: 0,
-        x: -100,
+        y: -50, // Start above and move down
         duration: 1.5,
         ease: 'power2.out',
       });
 
-      // Animation for buttons
+      // Animation for buttons (fade in down)
       gsap.from(buttonRef.current, {
         opacity: 0,
-        y: 50,
+        y: -50, // Start above and move down
         duration: 1.5,
         delay: 0.5,
         ease: 'power2.out',
       });
 
-      // Animation for image
+      // Animation for image (fade in down)
       gsap.from(imageRef.current, {
         opacity: 0,
-        x: 100,
+        y: -50, // Start above and move down
         duration: 1.5,
         delay: 0.5,
         ease: 'power2.out',
@@ -50,10 +50,7 @@ const Pageone = () => {
     }
   }, []);
 
-
-  const itemRefs = useRef([]);
-
-  // GSAP animation effect
+  // GSAP animation effect for items (fade in down)
   useEffect(() => {
     const isDesktop = window.innerWidth > 768;
 
@@ -65,7 +62,7 @@ const Pageone = () => {
           el,
           {
             autoAlpha: 0,
-            y: 50,
+            y: -50, // Start above and move down
           },
           {
             autoAlpha: 1,
@@ -83,13 +80,19 @@ const Pageone = () => {
       });
     }
   }, []);
-    return (
-        <div ref={buttonRef} className='relative'>
-            <div   className='w-full container mx-auto'>
-              <Image src={image2} alt='herobottom imae is loading' className='w-full h-auto object-cover mt-[-100px]' />
-            </div>
-          </div>
-    );
+
+  return (
+    <div ref={buttonRef} className='relative'>
+      <div className='w-full container mx-auto'>
+        <Image
+          src={image2}
+          alt='herobottom image is loading'
+          className='w-full h-auto object-cover mt-[-100px]'
+          ref={imageRef}
+        />
+      </div>
+    </div>
+  );
 };
 
 export default Pageone;
