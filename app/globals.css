@@ -101,6 +101,147 @@ body {
 
 
 @layer utilities{
+  .bopaddcionsa:hover{
+    border-radius: 50px;
+    border: 1px solid rgba(202, 204, 208, 0.00);
+    background: var(--CTA, linear-gradient(255deg, #D84A0E 36.31%, #D8870E 98.82%));
+    transition: 0.3s;
+  }
+    .bopaddcionsa{
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(22px);
+  }
+  .exoisnasd{
+    color: var(--White, #FFF);
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%; /* 26.4px */
+    letter-spacing: 0.12px;
+  }
+  .benifitsepepe{
+  border-radius: 16px;
+border: 1px solid rgba(255, 255, 255, 0.16);
+background: rgba(255, 255, 255, 0.04);
+backdrop-filter: blur(0px);
+  }
+  .voerflow{
+    background: linear-gradient(180deg, rgba(254, 208, 31, 0.17) 0%, rgba(254, 208, 31, 0.00) 50%), #000;
+  }
+.flexingassection{
+  border-radius: 120px;
+background: rgba(255, 255, 255, 0.05);
+}
+  .websisedsesser{
+    color: #FFF;
+    font-family: "Helvetica Neue";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 15.6px */
+  }
+  .TOPASEIONTEXTGERQ{
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 100%);
+    backdrop-filter: blur(10px);
+  }
+  .topuseiaoend{
+    color: #FFF;
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 23.4px */
+  }
+  .semofieasbausesd{
+    color: #FFF;
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    border-radius: 120px;
+border: 1px solid rgba(255, 255, 255, 0.12);
+
+  }
+  .gridinessaegbaesds{
+    border-radius: 22px;
+border: 1px solid #ffffff21;
+background: linear-gradient(180deg, rgba(234, 61, 48, 0.00) 0%, rgba(234, 61, 48, 0.24) 100%);
+backdrop-filter: blur(25px);
+}
+  .fixnbgadsigoansd{
+    color: var(--02, #FED01F);
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%; /* 27px */
+      text-align: center;
+  }
+  .spacingsasdfsed{
+    border-radius: 0px 0px 22px 22px;
+border: 1px solid #ffffff21;
+background: linear-gradient(237deg, rgba(254, 208, 31, 0.00) 68.84%, rgba(254, 208, 31, 0.27) 100%), rgba(255, 255, 255, 0.04);
+backdrop-filter: blur(75px);
+  }
+  .bordingeinsawsd{
+    border: 1px solid #9C5954;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(75px);
+  }
+  .backgroiundignws{
+    border-radius: 22px 22px 0px 0px;
+    border: 1px solid #ffffff21;
+    background: linear-gradient(59deg, rgba(234, 61, 48, 0.00) 69.53%, rgba(234, 61, 48, 0.27) 100%), rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(75px);
+  }
+  .fashiondesinas{
+    color: #FFF;
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 36px */
+  }
+  .nofaching{
+    color: #CFCFCF;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+  }
+  .fasterthes{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 21px */
+    background: var(--CTA, linear-gradient(255deg, #D84A0E 36.31%, #D8870E 98.82%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .gridingbaddins{
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .snpergameaws{
+    color: #EBEBEB;
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%; /* 55px */
+  }
+  .regulariteems{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+    background: linear-gradient(255deg, #D84A0E 36.31%, #D8870E 98.82%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   .buttonauditeltkleaeasa{
     color: var(--Blue-B0, #FFF);
     leading-trim: both;
@@ -114,6 +255,10 @@ body {
     background: radial-gradient(50% 100% at 50% 0%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 100%), linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.08) 100%);
     box-shadow: 0px 2px 12px 0px rgba(7, 5, 24, 0.50);
     backdrop-filter: blur(11.299321174621582px);
+    transition: 0.3s;
+  }
+  .buttonauditeltkleaeasa:hover{
+    background: #00000027;
   }
   .thefirstfullty{
     color: #EBEBEB;
@@ -785,23 +930,19 @@ background: rgba(175, 50, 16, 0.20);
     line-height: 160%; /* 25.6px */
   }
   .whatisextass{
-    color: #FFF;
-    font-family: "Segoe UI";
-
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+color: var(--Absolute-White, #FFF);
+font-family: "Helvetica Neue";
+font-style: normal;
+font-weight: 500;
+line-height: 120%; /* 24px */
   }
   .howtobue{
-    background: linear-gradient(180deg, #F3F3F6 9.26%, #663DDE 65.19%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: center;
-    font-family: "Segoe UI";
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+      color: #EBEBEB;
+      text-align: center;
+      font-family: "Helvetica Neue";
+      font-style: normal;
+      font-weight: 700;
+      line-height: 110%; /* 55px */
   }
   .lineronezse{
     background-color: #522FC780;

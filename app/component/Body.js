@@ -16,10 +16,11 @@ const Body = () => {
             <Pageone/>
             <Pagetwo/>
             <Pagethree/>
-            <Pagefore/>
+            {/* <Pagefore/> */}
             <Pagefive/>
-            {/* <Pageeight/>
             <Pagesix/>
+            {/* <Pageeight/>
+            
             <Pageseven/> */}
             <Footer/>
         </div>
