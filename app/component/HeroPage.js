@@ -83,6 +83,8 @@ const HeroPage = () => {
     }
   }, []);
 
+  
+
 
     return (
         <div id="hero" ref={buttonRef} className='relative'>

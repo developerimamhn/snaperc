@@ -98,19 +98,19 @@ const Pagesix = () => {
           });
         }, []);
     return (
-        <div id='Community' className='section7 relative -mt-[1] sm:px-0 px-6 py-[50px] md:py-[58px] lg:py-[80px] xl:py-[110px] 2xl:py-[140px] voerflow'>
+        <div id='Community' className='section7 relative -mt-[1] sm:px-0 px-6 pb-[50px] md:pb-[58px] lg:pb-[80px] xl:pb-[110px] 2xl:pb-[140px] voerflow'>
           {/* <div className=' w-full h-full absolute top-0 left-0 z-[-2]' ></div> */}
           
             <div className='px-[24px] sm:px-0 container mx-auto pb-[32px] sm:pb-[36px] md:pb-[40px] lg:pb-[48px] xl:pb-[64px] 2xl:pb-[80px]'>
-                <div className='relative mt-[40px] sm:mt-[40px] md:mt-[50px] lg:mt-[66px] xl:mt-[80px] 2xl:mt-[100px] pb-[32px] sm:pb-[36px] md:pb-[40px] lg:pb-[48px] xl:pb-[64px] 2xl:pb-[73px]'>
-                  <div className='flex items-center jusitfy-center flex-col'>
-                  <span className='regulariteems text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] px-[14px] sm:px-[15px] md:px-[16px] 
-                  lg:px-[20px] xl:px-[24px] 2xl:px-[32px] py-1 sm:py-2 lg:py-3 border-[1px] border-[#d84a0e80] rounded-[90px] inline-block text-center'>REFERRAL</span>
-                    <h2 className='howtobue text-[20px] sm:text-[24px] md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:text-[50px] pt-[11px] sm:pt-[12px] md:pt-[13px] lg:pt-[14px] xl:pt-[15px] 2xl:pt-[16px]'>Everything You Need to Know</h2>
-                </div>
+                <div className='relative pb-[32px] sm:pb-[36px] md:pb-[40px] lg:pb-[48px] xl:pb-[64px] 2xl:pb-[73px]'>
                 </div>
                 <div className='mt-[24px] sm:mt-[32px] md:mt-[36px] lg:mt-[40px] xl:mt-[48px] 2xl:mt-[64px]'>
-                    <div className='flex flex-col justify-center items-center '>
+                    <div className='flex  justify-center items-start sm:flex-row flex-col gap-[16px] '>
+                    <div className='flex items-start jusitfy-start flex-col'>
+                        <span className='regulariteems text-[10px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] px-[14px] sm:px-[15px] md:px-[16px] 
+                        lg:px-[20px] xl:px-[24px] 2xl:px-[32px] py-1 sm:py-2 lg:py-3 border-[1px] border-[#d84a0e80] rounded-[90px] inline-block text-left'>REFERRAL</span>
+                        <h2 className='howtobue text-[20px] sm:text-[24px] md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:text-[50px] pt-[11px] sm:pt-[12px] md:pt-[13px] lg:pt-[14px] xl:pt-[15px] 2xl:pt-[16px] !text-left'>Everything You Need to Know</h2>
+                    </div>
                     <div className="w-full flex flex-col gap-[11px] sm:gap-[12px] md:gap-[13px] lg:gap-[14px] xl:gap-[15px] 2xl:gap-[16px]">
 
                     {faqs.map((faq, index) => (
@@ -128,7 +128,7 @@ const Pagesix = () => {
                             </div>
                         </div>
                         {openFaq === faq.id && (
-                            <p className="extasiscuting text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px] pt-[13px] sm:pt-[14px] md:pt-[15px] lg:pt-[16px] xl:pt-[20px] 2xl:pt-[24px] sm:w-[42%] ">
+                            <p className="extasiscuting text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px] pt-[13px] sm:pt-[14px] md:pt-[15px] lg:pt-[16px] xl:pt-[20px] 2xl:pt-[24px] sm:w-[72%] ">
                             {faq.answer}
                             </p>
                         )}

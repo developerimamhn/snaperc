@@ -17,11 +17,11 @@ const Pagetwo = () => {
   const gridItem2Ref = useRef(null);
   const gridItem3Ref = useRef(null);
   const titleRef = useRef(null);
-  const acquireRef = useRef(null);
-  
+  const itemRefs = useRef([]);
+
   useEffect(() => {
     const mm = gsap.matchMedia();
-  
+
     mm.add(
       {
         isDesktop: '(min-width: 768px)',
@@ -29,149 +29,127 @@ const Pagetwo = () => {
       },
       (context) => {
         const { isDesktop, isMobile } = context.conditions;
-  
-        // Skip all animations on mobile
+
         if (isMobile) return;
-  
-        // Main wrapper animation (desktop only)
+
+        // Wrapper animation: Fade in with slight scale
         gsap.fromTo(
           wrapperRef.current,
-          { y: 100, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 1.5,
-            ease: 'power3.out',
-            scrollTrigger: {
-              trigger: wrapperRef.current,
-              start: 'top 80%',
-              end: 'top 20%',
-              scrub: 0.8,
-            },
-          }
-        );
-  
-        // Title animation (desktop only)
-        gsap.fromTo(
-          titleRef.current,
-          { y: 30, opacity: 0, scale: 0.95 },
-          {
-            y: 0,
-            opacity: 1,
-            scale: 1,
-            duration: 1,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: titleRef.current,
-              start: 'top 85%',
-              end: 'top 50%',
-              scrub: 0.8,
-            },
-          }
-        );
-  
-        // Grid items animation (desktop only)
-        [gridItem1Ref, gridItem2Ref, gridItem3Ref].forEach((ref, index) => {
-          gsap.fromTo(
-            ref.current,
-            { y: 50, opacity: 0, scale: 0.9 },
-            {
-              y: 0,
-              opacity: 1,
-              scale: 1,
-              duration: 1,
-              delay: index * 0.25,
-              ease: 'power3.out',
-              scrollTrigger: {
-                trigger: ref.current,
-                start: 'top 80%',
-                end: 'top 30%',
-                scrub: 0.8,
-              },
-            }
-          );
-        });
-  
-        // Acquire CRX section animation (desktop only)
-        gsap.fromTo(
-          acquireRef.current,
-          { y: 50, opacity: 0, scale: 0.95 },
+          { y: 50, opacity: 0, scale: 0.98 },
           {
             y: 0,
             opacity: 1,
             scale: 1,
             duration: 1.2,
-            ease: 'power3.out',
+            ease: 'power4.out',
             scrollTrigger: {
-              trigger: acquireRef.current,
-              start: 'top 85%',
-              end: 'top 40%',
-              scrub: 0.8,
+              trigger: wrapperRef.current,
+              start: 'top 90%',
+              end: 'top 60%',
+              scrub: 0.5,
             },
           }
         );
-      }
-    );
-  
-    return () => mm.revert(); // Cleanup
-  }, []);
-  
-  const itemRefs = useRef([]);
-  
-  useEffect(() => {
-    const mm = gsap.matchMedia();
-  
-    mm.add(
-      {
-        isDesktop: '(min-width: 768px)',
-        isMobile: '(max-width: 767px)',
-      },
-      (context) => {
-        const { isMobile } = context.conditions;
-  
-        // Skip animations on mobile
-        if (isMobile) return;
-  
-        // Item animations (desktop only)
-        itemRefs.current.forEach((el, index) => {
-          if (!el) return;
-  
+
+        // Title animation: Letter-by-letter with bounce
+        const title = titleRef.current;
+        if (title) {
+          const chars = title.textContent.split('');
+          title.innerHTML = chars.map((char) => `<span>${char}</span>`).join('');
           gsap.fromTo(
-            el,
+            title.querySelectorAll('span'),
+            { y: 20, opacity: 0, rotationX: 90 },
             {
-              autoAlpha: 0,
-              y: 50,
-            },
-            {
-              autoAlpha: 1,
               y: 0,
-              duration: 0.3,
-              ease: 'power2.out',
+              opacity: 1,
+              rotationX: 0,
+              duration: 0.8,
+              ease: 'bounce.out',
+              stagger: 0.03,
               scrollTrigger: {
-                trigger: el,
-                start: 'top 100%',
-                toggleActions: 'play none none none',
+                trigger: title,
+                start: 'top 85%',
+                end: 'top 50%',
+                scrub: 0.5,
               },
-              delay: index * 0.1,
+            }
+          );
+        }
+
+        // Grid items animation: Staggered slide-in with elastic ease
+                [gridItem1Ref, gridItem2Ref, gridItem3Ref].forEach((ref, index) => {
+          gsap.fromTo(
+            ref.current,
+            { y: 80, opacity: 0, rotation: index % 2 === 0 ? -10 : 10 },
+            {
+              y: 0,
+              opacity: 1,
+              rotation: 0,
+              duration: 1.8,
+              ease: 'power4.inOut',
+              delay: index * 0.3,
+              scrollTrigger: {
+                trigger: ref.current,
+                start: 'top 85%',
+                end: 'top 30%',
+                scrub: 0.6,
+              },
             }
           );
         });
+
+        // ItemRefs animation: Pop-in with rotation
+        itemRefs.current.forEach((el, index) => {
+          if (!el) return;
+          gsap.fromTo(
+            el,
+            { opacity: 0, scale: 0.5, rotation: 10 },
+            {
+              opacity: 1,
+              scale: 1,
+              rotation: 0,
+              duration: 0.6,
+              ease: 'back.out(1.7)',
+              delay: index * 0.15,
+              scrollTrigger: {
+                trigger: el,
+                start: 'top 95%',
+                toggleActions: 'play none none none',
+              },
+            }
+          );
+        });
+
+        // SVG animation: Twinkle effect for star-like paths
+        const svg = gridItem1Ref.current.querySelector('svg');
+        if (svg) {
+          const stars = svg.querySelectorAll('path[fill="#FFF3FF"]');
+          stars.forEach((star, index) => {
+            gsap.to(star, {
+              opacity: gsap.utils.random(0.3, 1),
+              scale: gsap.utils.random(0.8, 1.2),
+              duration: gsap.utils.random(0.5, 1.5),
+              repeat: -1,
+              yoyo: true,
+              delay: index * 0.1,
+              ease: 'sine.inOut',
+            });
+          });
+        }
       }
     );
-  
-    return () => mm.revert(); // Cleanup
+
+    return () => mm.revert();
   }, []);
-
-
     
     return (
         <div ref={wrapperRef} id='Devolopers'  className=' relative py-[50px] md:py-[58px] lg:py-[80px] xl:py-[110px] 2xl:py-[140px]'>
            <div className='container mx-auto'>
             <div className='sm:px-0 px-[24px]'>
-              <span className='regulariteems text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] px-[14px] sm:px-[15px] md:px-[16px] lg:px-[20px] xl:px-[24px] 2xl:px-[32px] py-1 sm:py-2 lg:py-3 border-[1px] border-[#d84a0e80] rounded-[90px]'>FEATURES</span>
+              <span className='regulariteems text-[10px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] px-[14px] sm:px-[15px] md:px-[16px] lg:px-[20px] xl:px-[24px] 2xl:px-[32px] py-1 sm:py-2 lg:py-3 border-[1px] border-[#d84a0e80] rounded-[90px]'>FEATURES</span>
               <h2 ref={titleRef} className='text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:text-[50px] snpergameaws pt-[11px] sm:pt-[12px] md:pt-[13px] lg:pt-[14px] xl:pt-[15px] 2xl:pt-[16px] pb-[24px] sm:pb-[32px] md:pb-[36px] lg:pb-[40px] xl:pb-[48px] 2xl:pb-[64px]'>Why Snapper is a Game Changer</h2>
               <div className='grid grid-cols-1 sm:grid-cols-3 gap-[13px] sm:gap-[14px] md:gap-[15px] lg:gap-[16px] xl:gap-[20px] 2xl:gap-[24px]'>
-                <div className='gridingbaddins relative flex justify-between flex-col'>
+                <div className='gridingbaddins relative flex justify-between flex-col' ref={gridItem1Ref}>
 
                   <svg className='w-2/3 mx-auto brightness-animation' viewBox="0 0 391 257" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_418_42538)">
@@ -272,7 +250,7 @@ const Pagetwo = () => {
                   <p className='fasterthes text-[9px] sm:text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px] '>→ 10x faster than web dashboards and Telegram bots.</p>
                   </div>
                 </div>
-                <div className='gridingbaddins flex justify-between flex-col'>
+                <div className='gridingbaddins flex justify-between flex-col' ref={gridItem2Ref}>
                   <Image src={image990} alt="Snapper UI" className='w-full h-auto' />
                   <div className='p-[13px] sm:p-[14px] md:p-[15px] lg:p-[16px] xl:p-[20px] 2xl:p-[24px]'>
                   <h3 className='fashiondesinas pb-[8px] text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] pt-[24px] sm:pt-[32px] md:pt-[36px] lg:pt-[40px] xl:pt-[48px] 2xl:pt-[64px]'>Use Snapper Anywhere</h3>
@@ -280,7 +258,7 @@ const Pagetwo = () => {
                   <p className='fasterthes text-[9px] sm:text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px]'>→ Your habits don’t change. Snapper adapts to you.</p>
                   </div>
                 </div>
-                <div className='gridingbaddins flex justify-between flex-col'>
+                <div className='gridingbaddins flex justify-between flex-col' ref={gridItem3Ref}>
                   <Image src={image33} alt="Snapper UI" className='w-full h-auto' />
                   <div className='p-[13px] sm:p-[14px] md:p-[15px] lg:p-[16px] xl:p-[20px] 2xl:p-[24px]'>
                   <h3 className='fashiondesinas pb-[8px] text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] pt-[24px] sm:pt-[32px] md:pt-[36px] lg:pt-[40px] xl:pt-[48px] 2xl:pt-[64px]'>The Safest Trading Bot Ever</h3>

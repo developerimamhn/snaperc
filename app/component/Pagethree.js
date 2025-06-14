@@ -4,7 +4,7 @@ import React, { useEffect, useRef,useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import image4 from './image/image4.png';
-import slide2 from './image/image103512.png';
+import imagesecret from './image/imagesecret.png';
 import slide3 from './image/image3 (2).png';
 import slide4 from './image/image4 (2).png';
 import slide5 from './image/image5 (2).png';
@@ -100,16 +100,17 @@ const Pagethree = () => {
     return () => ctx.revert();
   }, []);
 
+
   
     return ( 
-        <div id='Ecosystem' ref={wrapperRef} className='relative py-[50px] md:py-[58px] lg:py-[80px] xl:py-[110px] 2xl:py-[140px] sm:px-0 px-6'>
-          {/* <Image src={slide2} alt="Background Image" className='absolute inset-0 w-full h-full object-cover' /> */}
+        <div id='Ecosystem'  className='relative py-[50px] md:py-[58px] lg:py-[80px] xl:py-[110px] 2xl:py-[140px] sm:px-0 px-6'>
+          <Image src={imagesecret} alt="Background Image" className='absolute inset-0 w-full h-full object-cover' />
           {/* <div className='w-1/3 absolute right-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2 goadsgvedfevg h-1/3 -z-[1]'></div> */}
-            <div  className='relative container mx-auto '>
+            <div ref={wrapperRef} className='relative container mx-auto '>
                 <div className='flex items-center justify-center flex-col'>
-                  <span className='regulariteems text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] px-[14px] sm:px-[15px] md:px-[16px] lg:px-[20px] xl:px-[24px] 2xl:px-[32px] py-1 sm:py-2 lg:py-3 border-[1px] border-[#d84a0e80] rounded-[90px] '>THE SNAPPER ADVANTAGE</span>
-                  <h2 className='text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:text-[50px] snpergameaws pt-[11px] sm:pt-[12px] md:pt-[13px] lg:pt-[14px] xl:pt-[15px] 2xl:pt-[16px]  pb-[13px] sm:pb-[14px] md:pb-[15px] lg:pb-[16px] xl:pb-[20px] 2xl:pb-[24px]  text-center'>Unlock the Full Power of <br/> On-Chain Trading</h2>
-                  <p className='nofaching text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] pb-[13px] sm:pb-[14px] md:pb-[15px] lg:pb-[16px] xl:pb-[20px] 2xl:pb-[24px] text-center '>Snapper isn’t just another Telegram bot or dashboard. It’s a fundamentally new way to interact with DeFi — 
+                  <span className='regulariteems text-[10px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] px-[14px] sm:px-[15px] md:px-[16px] lg:px-[20px] xl:px-[24px] 2xl:px-[32px] py-1 sm:py-2 lg:py-3 border-[1px] border-[#d84a0e80] rounded-[90px] '>THE SNAPPER ADVANTAGE</span>
+                  <h2  className='text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:text-[50px] snpergameaws pt-[11px] sm:pt-[12px] md:pt-[13px] lg:pt-[14px] xl:pt-[15px] 2xl:pt-[16px]  pb-[13px] sm:pb-[14px] md:pb-[15px] lg:pb-[16px] xl:pb-[20px] 2xl:pb-[24px]  text-center'>Unlock the Full Power of <br/> On-Chain Trading</h2>
+                  <p  className='nofaching text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] pb-[13px] sm:pb-[14px] md:pb-[15px] lg:pb-[16px] xl:pb-[20px] 2xl:pb-[24px] text-center '>Snapper isn’t just another Telegram bot or dashboard. It’s a fundamentally new way to interact with DeFi — 
                    <br/> deeply integrated, fully autonomous, and built for speed, security, and flexibility.</p>
                 </div>
                 <div className='grid grid-cols-1 sm:grid-cols-6 gap-[11px] sm:gap-[12px] md:gap-[13px] lg:gap-[14px] xl:gap-[15px] 2xl:gap-[16px]'>
@@ -135,13 +136,13 @@ const Pagethree = () => {
 
                       <h2 className='text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[20px] snpergameaws  text-lef !font-medium !leading-[150%]'>Advantages of on <br/> Dexscreener</h2>
                     </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" className='' width="8" height="200" viewBox="0 0 6 115" fill="none">
+                    <svg xmlns="http://www.w3.org/2000/svg" className='w-[6px]'  viewBox="0 0 6 115" fill="none">
   <path d="M3 0.333333C1.52724 0.333333 0.333333 1.52724 0.333333 3C0.333333 4.47276 1.52724 5.66667 3 5.66667C4.47276 5.66667 5.66667 4.47276 5.66667 3C5.66667 1.52724 4.47276 0.333333 3 0.333333ZM3 109.333C1.52724 109.333 0.333329 110.527 0.333328 112C0.333328 113.473 1.52724 114.667 3 114.667C4.47275 114.667 5.66666 113.473 5.66666 112C5.66666 110.527 4.47275 109.333 3 109.333ZM3 3L2.5 3L2.5 112L3 112L3.5 112L3.5 3L3 3Z" fill="white" fill-opacity="0.2"/>
 </svg>
                     <div className='row-span-1 w-full bordingeinsawsd  px-[24px] sm:px-[32px] md:px-[36px] lg:px-[40px] xl:px-[48px] 2xl:px-[64px] py-[12px] sm:py-[13px] md:py-[14px] lg:py-[15px] xl:py-[16px] 2xl:py-[20px] flex items-center justify-center'>
                       <p className='nofaching text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] text-center'>Improved Trade Execution</p>
                     </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="200" viewBox="0 0 6 115" fill="none">
+                    <svg xmlns="http://www.w3.org/2000/svg" className='w-[6px]' viewBox="0 0 6 115" fill="none">
   <path d="M3 0.333333C1.52724 0.333333 0.333333 1.52724 0.333333 3C0.333333 4.47276 1.52724 5.66667 3 5.66667C4.47276 5.66667 5.66667 4.47276 5.66667 3C5.66667 1.52724 4.47276 0.333333 3 0.333333ZM3 109.333C1.52724 109.333 0.333329 110.527 0.333328 112C0.333328 113.473 1.52724 114.667 3 114.667C4.47275 114.667 5.66666 113.473 5.66666 112C5.66666 110.527 4.47275 109.333 3 109.333ZM3 3L2.5 3L2.5 112L3 112L3.5 112L3.5 3L3 3Z" fill="white" fill-opacity="0.2"/>
 </svg>
                     <div className='row-span-3 w-full spacingsasdfsed p-[8px] lg:p-[12px] flex items-center justify-start gap-[11px] sm:gap-[12px] md:gap-[13px] lg:gap-[14px] xl:gap-[15px] 2xl:gap-[16px] '>

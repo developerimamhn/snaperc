@@ -334,6 +334,19 @@ background: rgba(234, 61, 48, 0.12);
   animation: brightnessPulse 5s ease-in-out infinite;
 }
 
+@keyframes brightnessPulseskys {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.brightness-animationskys {
+  animation: brightnessPulseskys 5s ease-in-out infinite;
+}
+
   .conflueiah{
     color: var(--Blue-B200, #6B788E);
     font-family: 'Author';

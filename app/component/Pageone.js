@@ -87,7 +87,7 @@ const Pageone = () => {
         <Image
           src={image2}
           alt='herobottom image is loading'
-          className='w-full h-auto object-cover mt-[-100px]'
+          className='w-full h-auto object-cover mt-[-30px] sm:mt-[-100px]'
           ref={imageRef}
         />
       </div>
