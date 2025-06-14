@@ -156,6 +156,7 @@ backdrop-filter: blur(0px);
   background: none; /* Remove original background */
 }
 
+
 .voerflow::before {
   content: '';
   position: absolute;
@@ -166,8 +167,8 @@ backdrop-filter: blur(0px);
   background: radial-gradient(169.69% 169.69% at 53.41% 100%, rgba(0, 0, 0, 0.00) 50%, #D84A0E 70%, #EBEBEB 100%);
   transform: rotate(180deg);
   transform-origin: center center;
-  z-index: -1; /* Place gradient behind content */
-  border-radius: 40px 40px 0px 0px; /* Match container's border-radius */
+  z-index: -1;
+  border-radius: 40px 40px 0px 0px;
 }
 
 .flexingassection{

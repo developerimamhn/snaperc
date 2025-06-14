@@ -74,7 +74,7 @@ const Header = () => {
     return (
         <div className='relative overflow-hidden backgroiunliaene'>
             {/* <Image className="w-full absolute top-0 left-0 z-[-2] brightness-animation" src={image1} alt="loading ..."/> */}
-            <svg className="w-full absolute top-0 left-0 brightness-animation brightness-animationskys" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-full absolute top-0 left-0 brightness-animation brightness-animationskys z-[-1]" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5.11599 32.3725L4.47947 33.1273L4.95028 33.953L3.98429 33.4556L2.92759 33.8235L3.56411 33.0687L3.0933 32.2431L4.05929 32.7404L5.11599 32.3725Z" fill="white" fill-opacity="0.5"/>
 <path d="M280.03 98.0327L279.394 98.7875L279.864 99.6131L278.898 99.1158L277.842 99.4836L278.478 98.7289L278.007 97.9032L278.973 98.4005L280.03 98.0327Z" fill="white" fill-opacity="0.5"/>
 <path d="M111.989 171.574L111.353 172.328L111.823 173.154L110.857 172.657L109.801 173.025L110.437 172.27L109.966 171.444L110.932 171.942L111.989 171.574Z" fill="white" fill-opacity="0.5"/>

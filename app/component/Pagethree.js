@@ -114,7 +114,7 @@ const Pagethree = () => {
                    <br/> deeply integrated, fully autonomous, and built for speed, security, and flexibility.</p>
                 </div>
                 <div className='grid grid-cols-1 sm:grid-cols-6 gap-[11px] sm:gap-[12px] md:gap-[13px] lg:gap-[14px] xl:gap-[15px] 2xl:gap-[16px]'>
-                  <div className="col-span-4 relative">
+                  <div className="col-span-4 relative pb-6 sm:pb-0">
                     <svg className='w-full absolute bottom-0 left-0' viewBox="0 0 767 163" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="767" height="190" fill="url(#paint0_linear_461_28668)"/>
                     <defs>

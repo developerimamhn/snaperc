@@ -83,11 +83,11 @@ const Pageone = () => {
 
   return (
     <div ref={buttonRef} className='relative'>
-      <div className='w-full container mx-auto'>
+      <div className='w-full container mx-auto px-6 sm:px-0'>
         <Image
           src={image2}
           alt='herobottom image is loading'
-          className='w-full h-auto object-cover mt-[-30px] sm:mt-[-100px]'
+          className='w-full h-auto object-cover mt-[-30px] sm:mt-[-100px] relative z-[-1]'
           ref={imageRef}
         />
       </div>

@@ -106,7 +106,7 @@ const Pagesix = () => {
                 </div>
                 <div className='mt-[24px] sm:mt-[32px] md:mt-[36px] lg:mt-[40px] xl:mt-[48px] 2xl:mt-[64px]'>
                     <div className='flex  justify-center items-start sm:flex-row flex-col gap-[16px] '>
-                    <div className='flex items-start jusitfy-start flex-col'>
+                    <div className='flex items-start jusitfy-start flex-col pb-6 sm:pb-0'>
                         <span className='regulariteems text-[10px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] px-[14px] sm:px-[15px] md:px-[16px] 
                         lg:px-[20px] xl:px-[24px] 2xl:px-[32px] py-1 sm:py-2 lg:py-3 border-[1px] border-[#d84a0e80] rounded-[90px] inline-block text-left'>REFERRAL</span>
                         <h2 className='howtobue text-[20px] sm:text-[24px] md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:text-[50px] pt-[11px] sm:pt-[12px] md:pt-[13px] lg:pt-[14px] xl:pt-[15px] 2xl:pt-[16px] !text-left'>Everything You Need to Know</h2>
